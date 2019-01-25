@@ -1,7 +1,7 @@
 
 team_name = 'Jake Halletts Team' # Only 10 chars displayed.
 strategy_name = 'collude untill betryed'
-strategy_description = 'collude until I am betrayed'
+strategy_description = 'collude until I am betrayed, betrayed on round 200'
     
 def move(my_history, their_history, my_score, their_score):
     if len(my_history)==0:
@@ -10,6 +10,9 @@ def move(my_history, their_history, my_score, their_score):
         return 'b'
     else:
         return 'c'
+        
+    if len(my_history)== 200:
+        return 'b'
         
     ''' Make move based on player
     
